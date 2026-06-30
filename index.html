@@ -136,9 +136,9 @@
             <a class="text-ash hover:text-on-background transition-colors" href="#about">About</a>
             <a class="text-ash hover:text-on-background transition-colors" href="#contact">Contact</a>
         </div>
-        <a href="#contact" class="bg-paper text-ink px-element-md py-3 rounded-full font-ui-nav text-ui-nav uppercase tracking-widest scale-100 hover:scale-95 transition-transform text-center select-none">
+        <button id="reachOutNavBtn" class="bg-paper text-ink px-element-md py-3 rounded-full font-ui-nav text-ui-nav uppercase tracking-widest scale-100 hover:scale-95 transition-transform text-center select-none cursor-pointer">
             Reach out
-        </a>
+        </button>
     </nav>
 
     <!-- 1. Hero Section -->
@@ -303,15 +303,15 @@
     <!-- 5. Call to Action -->
     <section class="bg-ink py-offset-lg px-element-lg overflow-hidden relative" id="contact">
         <div class="max-w-[1440px] mx-auto text-center reveal">
-            <a class="block group relative" href="mailto:hello@manas.design">
-                <h2 class="font-hero text-[80px] md:text-[152px] leading-none text-paper uppercase group-hover:text-ash transition-colors duration-500">
+            <button id="collaborateBtn" class="block w-full group relative focus:outline-none cursor-pointer">
+                <h2 class="font-hero text-[80px] md:text-[152px] leading-none text-paper uppercase group-hover:text-ash transition-colors duration-500 text-center">
                     LET'S<br>COLLABORATE
                 </h2>
                 <div class="mt-element-md inline-flex items-center gap-micro group-hover:opacity-100 opacity-50 transition-opacity">
                     <span class="font-ui-nav text-ui-nav text-paper uppercase tracking-widest">Get in Touch</span>
                     <span class="material-symbols-outlined text-paper" data-weight="fill">arrow_outward</span>
                 </div>
-            </a>
+            </button>
         </div>
     </section>
 
@@ -332,6 +332,64 @@
             </div>
         </div>
     </footer>
+
+    <!-- Modal Overlay (Stitch Design) -->
+    <div class="fixed inset-0 z-[100] modal-overlay flex items-center justify-center px-element-md py-element-md hidden opacity-0" id="contactModal">
+        <!-- Modal Container -->
+        <div class="bg-carbon w-full max-w-[1100px] h-auto max-h-[90vh] overflow-y-auto relative flex flex-col md:flex-row transition-all duration-700 ease-out translate-y-8 opacity-0 border border-white/5" id="modalContainer">
+            <!-- Close Button -->
+            <button class="absolute top-element-md right-element-md z-[110] text-ash hover:text-white transition-colors duration-300 cursor-pointer" id="closeModal">
+                <span class="material-symbols-outlined scale-150">close</span>
+            </button>
+            <!-- Left: Text/Editorial Content -->
+            <div class="w-full md:w-2/5 p-element-lg md:p-card-pad flex flex-col justify-between border-b md:border-b-0 md:border-r border-ash/20 bg-surface-container-lowest">
+                <div class="space-y-element-md">
+                    <h2 class="font-heading-lg text-heading-lg text-white uppercase leading-[1.15] tracking-tight">
+                        LET'S <br/> TALK
+                    </h2>
+                    <p class="font-body-lg text-ash max-w-xs">
+                        Whether you're looking for a collaboration, a project commission, or just a quiet conversation about design.
+                    </p>
+                </div>
+                <div class="mt-element-md md:mt-24 space-y-micro">
+                    <p class="text-ui-nav uppercase text-pewter tracking-widest">General Inquiries</p>
+                    <p class="font-body-md text-white">manasx1upadhyay@gmail.com</p>
+                </div>
+            </div>
+            <!-- Right: Form Content -->
+            <div class="w-full md:w-3/5 p-element-lg md:p-card-pad bg-carbon flex flex-col">
+                <form id="contactForm" class="space-y-element-md flex-grow">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-element-md">
+                        <div class="group relative">
+                            <label class="block text-ui-nav uppercase text-ash group-focus-within:text-white transition-colors mb-micro" for="name">Name</label>
+                            <input required class="w-full bg-transparent border-t-0 border-x-0 border-b border-ash focus:border-white focus:ring-0 text-white font-body-md py-4 px-0 transition-all placeholder-ash/50" id="name" name="name" placeholder="John Doe" type="text"/>
+                        </div>
+                        <div class="group relative">
+                            <label class="block text-ui-nav uppercase text-ash group-focus-within:text-white transition-colors mb-micro" for="email">Email</label>
+                            <input required class="w-full bg-transparent border-t-0 border-x-0 border-b border-ash focus:border-white focus:ring-0 text-white font-body-md py-4 px-0 transition-all placeholder-ash/50" id="email" name="email" placeholder="hello@domain.com" type="email"/>
+                        </div>
+                    </div>
+                    <div class="group relative pt-micro">
+                        <label class="block text-ui-nav uppercase text-ash group-focus-within:text-white transition-colors mb-micro" for="subject">Subject</label>
+                        <input required class="w-full bg-transparent border-t-0 border-x-0 border-b border-ash focus:border-white focus:ring-0 text-white font-body-md py-4 px-0 transition-all placeholder-ash/50" id="subject" name="subject" placeholder="Inquiry about new project" type="text"/>
+                    </div>
+                    <div class="group relative pt-micro">
+                        <label class="block text-ui-nav uppercase text-ash group-focus-within:text-white transition-colors mb-micro" for="message">Message</label>
+                        <textarea required class="w-full bg-transparent border-t-0 border-x-0 border-b border-ash focus:border-white focus:ring-0 text-white font-body-md py-4 px-0 transition-all placeholder-ash/50 resize-none" id="message" name="message" placeholder="Share your vision..." rows="4"></textarea>
+                    </div>
+                    <div class="pt-element-md flex flex-col md:flex-row md:items-center justify-between gap-component-int">
+                        <p class="text-micro text-pewter max-w-[240px]">
+                            By submitting this form, you agree to our privacy policy regarding data handling.
+                        </p>
+                        <button class="bg-white text-ink px-12 py-5 rounded-full font-ui-nav text-[12px] font-normal uppercase tracking-widest hover:bg-pewter hover:text-white transition-all duration-500 transform active:scale-95 flex items-center justify-center gap-2 group cursor-pointer" type="submit">
+                            Send Message
+                            <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>

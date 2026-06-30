@@ -81,50 +81,50 @@
   --font-subheading: "Hanken Grotesk", sans-serif;
   --font-hero-mobile: "Hanken Grotesk", sans-serif;
 
-  --font-size-heading-sm: 45px;
-  --font-size-heading-sm--line-height: 55px;
-  --font-size-heading-sm--font-weight: 300;
+  --text-heading-sm: 45px;
+  --text-heading-sm--line-height: 55px;
+  --text-heading-sm--font-weight: 300;
 
-  --font-size-micro: 9px;
-  --font-size-micro--line-height: 12px;
-  --font-size-micro--font-weight: 400;
+  --text-micro: 9px;
+  --text-micro--line-height: 12px;
+  --text-micro--font-weight: 400;
 
-  --font-size-hero: 225px;
-  --font-size-hero--line-height: 171px;
-  --font-size-hero--letter-spacing: -0.04em;
-  --font-size-hero--font-weight: 300;
+  --text-hero: 225px;
+  --text-hero--line-height: 171px;
+  --text-hero--letter-spacing: -0.04em;
+  --text-hero--font-weight: 300;
 
-  --font-size-body-md: 16px;
-  --font-size-body-md--line-height: 22px;
-  --font-size-body-md--font-weight: 400;
+  --text-body-md: 16px;
+  --text-body-md--line-height: 22px;
+  --text-body-md--font-weight: 400;
 
-  --font-size-heading-md: 54px;
-  --font-size-heading-md--line-height: 65px;
-  --font-size-heading-md--font-weight: 300;
+  --text-heading-md: 54px;
+  --text-heading-md--line-height: 65px;
+  --text-heading-md--font-weight: 300;
 
-  --font-size-display: 94px;
-  --font-size-display--line-height: 103px;
-  --font-size-display--font-weight: 300;
+  --text-display: 94px;
+  --text-display--line-height: 103px;
+  --text-display--font-weight: 300;
 
-  --font-size-heading-lg: 78px;
-  --font-size-heading-lg--line-height: 90px;
-  --font-size-heading-lg--font-weight: 300;
+  --text-heading-lg: 78px;
+  --text-heading-lg--line-height: 90px;
+  --text-heading-lg--font-weight: 300;
 
-  --font-size-ui-nav: 11px;
-  --font-size-ui-nav--letter-spacing: 0.1em;
-  --font-size-ui-nav--font-weight: 400;
+  --text-ui-nav: 11px;
+  --text-ui-nav--letter-spacing: 0.1em;
+  --text-ui-nav--font-weight: 400;
 
-  --font-size-body-lg: 18px;
-  --font-size-body-lg--line-height: 24px;
-  --font-size-body-lg--font-weight: 400;
+  --text-body-lg: 18px;
+  --text-body-lg--line-height: 24px;
+  --text-body-lg--font-weight: 400;
 
-  --font-size-subheading: 30px;
-  --font-size-subheading--line-height: 38px;
-  --font-size-subheading--font-weight: 300;
+  --text-subheading: 30px;
+  --text-subheading--line-height: 38px;
+  --text-subheading--font-weight: 300;
 
-  --font-size-hero-mobile: 80px;
-  --font-size-hero-mobile--line-height: 72px;
-  --font-size-hero-mobile--font-weight: 300;
+  --text-hero-mobile: 80px;
+  --text-hero-mobile--line-height: 72px;
+  --text-hero-mobile--font-weight: 300;
 }
 
 /* Base Styles & Core Theme Variables */
